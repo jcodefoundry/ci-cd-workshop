@@ -101,3 +101,14 @@ Opmerking: De stub‑workflows zijn opzettelijk incompleet en draaien alleen via
 - Voor coverage (JaCoCo) moet je zelf de Gradle Jacoco plugin toevoegen in `build.gradle` (bewust onderdeel van de opdracht).
 
 
+
+Fixes:
+- TODO's per level controleren. Zijn bij level 2 bijvoorbeeld al helemaal ingevuld door Junie
+- Level 3 oplitsen in 3A en 3B?
+  3A: Zorg dat code coverage wordt toegevoegd en laat de pipeline slagen (60% threshold)
+  3B: Threshold staat hoger en zorg ervoor dat de pipeline die nu faalt, weer groen wordt.
+- 
+
+Level
+
+

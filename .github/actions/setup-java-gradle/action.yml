@@ -1,5 +1,5 @@
 name: "Setup Java + Gradle (with cache)"
-description: "Checks out code, sets up Java and Gradle, and enables Gradle wrapper/caches via actions/cache."
+description: "Sets up Java and Gradle, and enables Gradle wrapper/caches via actions/cache."
 
 inputs:
   java-version:
@@ -14,9 +14,6 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - name: Check out code
-      uses: actions/checkout@v4
-
     - name: Setup Java
       uses: actions/setup-java@v4
       with:

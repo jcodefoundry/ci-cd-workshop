@@ -33,7 +33,10 @@ jobs:
     name: Build & Test
     runs-on: ubuntu-latest
     steps:
-      - name: Setup (checkout + JDK + Gradle + cache)
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - name: Setup (JDK + Gradle + cache)
         uses: ./.github/actions/setup-java-gradle
 
       - name: Build
