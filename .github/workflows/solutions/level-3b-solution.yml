@@ -1,16 +1,12 @@
-#############################################
-# Level 2 — Koopa's Fortress (SOLUTION)
-#
-# Voert tests uit en uploadt testrapporten.
-#############################################
-name: Level 2 - Koopa's Fortress (Solution)
+name: Level 3B - Boo's Haunted Mansion (Solution)
 
 on:
   workflow_dispatch: {}
 
 jobs:
-  test:
+  quality-gate:
     runs-on: ubuntu-latest
+
     steps:
       - name: Check out code
         uses: actions/checkout@v4
@@ -24,14 +20,16 @@ jobs:
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
 
-      - name: Run tests
-        run: ./gradlew test --stacktrace
+      - name: Run tests + generate JaCoCo report
+        env:
+          JACOCO_MINIMUM_COVERAGE: "0.80"
+        run: ./gradlew test jacocoTestReport
 
-      - name: Upload test reports (altijd)
+      - name: Upload coverage reports
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: test-reports
+          name: jacoco-reports
           path: |
-            build/test-results/test
-            build/reports/tests/test
+            build/reports/jacoco/test/jacocoTestReport.xml
+            build/reports/jacoco/test/html

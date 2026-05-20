@@ -1,25 +1,19 @@
-#############################################
-# Level 1 — Yoshi's Island (SOLUTION)
-#
-# Bouwt de app met Gradle bij handmatig starten.
-# Tip: Vervang de trigger door push/pull_request om 'm automatisch te laten lopen.
-#############################################
 name: Level 1 - Yoshi's Island (Solution)
 
 on:
   workflow_dispatch: {}
-  # Voor productiegebruik kun je dit overwegen:
-  # push:
-  #   branches: [ "**" ]
-  # pull_request:
-  #   branches: [ "**" ]
+  # Voor productiegebruik kon je dit overwegen:
+  #   push:
+  #     branches: [ "**" ]
+  #   pull_request:
+  #     branches: [ "**" ]
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Check out code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Setup Java 21
         uses: actions/setup-java@v4

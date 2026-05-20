@@ -1,5 +1,5 @@
 #############################################
-# Level 3 — Boo's Haunted Mansion (STUB)
+# Level 3b — Boo's Haunted Mansion
 #
 # Doel (verhaal):
 #  Ontsnap aan Boo's spookhuis met de kracht van Quality Gates.
@@ -11,7 +11,7 @@
 # Let op:
 # - Voeg eerst de JaCoCo plugin toe in build.gradle (zie level-3-README.md)
 #############################################
-name: Level 3 - Boo's Haunted Mansion
+name: Level 3b - Boo's Haunted Mansion
 
 on:
   workflow_dispatch: {}
@@ -34,16 +34,11 @@ jobs:
         uses: gradle/actions/setup-gradle@v4
 
       - name: Run tests + generate JaCoCo report
-        # TODO: Zorg dat dit werkt door de Jacoco plugin te configureren in Gradle
+        env:
+          JACOCO_MINIMUM_COVERAGE: "0.80"
         run: ./gradlew test jacocoTestReport
 
-      - name: Enforce coverage threshold (80%?)
-        # TODO: Controleer het XML rapport en laat de job falen bij te lage dekking
-        run: |
-          echo "Implement a coverage check against build/reports/jacoco/test/jacocoTestReport.xml"
-          exit 1 # TODO: Verwijder dit wanneer je check is geïmplementeerd
-
-      - name: Upload coverage reports (altijd)
+      - name: Upload coverage reports
         if: always()
         uses: actions/upload-artifact@v4
         with:
