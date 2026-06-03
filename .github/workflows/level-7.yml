@@ -18,7 +18,6 @@ name: Level 7 - Star Road
 #TODO: deze assignment moet nog worden aangepast, zodat die matcht met de solution
 on:
   workflow_dispatch: {}
-  # TODO: (optioneel) vervang/aanvul met push/pull_request triggers
 
 # TODO: (optioneel) concurrency toevoegen om dubbele runs te annuleren
 # concurrency:

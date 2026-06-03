@@ -1,12 +1,8 @@
 name: Level 1 - Yoshi's Island (Solution)
 
 on:
-  workflow_dispatch: {}
-  # Voor productiegebruik kon je dit overwegen:
-  #   push:
-  #     branches: [ "**" ]
-  #   pull_request:
-  #     branches: [ "**" ]
+  push:
+    branches: [ "**" ]
 
 jobs:
   build:

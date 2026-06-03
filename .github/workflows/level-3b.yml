@@ -33,6 +33,8 @@ jobs:
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
 
+        # TODO - kopieer werk van 3a, maar verander je minimum coverage naar 80% en zorg dat de test alsnog slaagt
+
       - name: Run tests + generate JaCoCo report
         env:
           JACOCO_MINIMUM_COVERAGE: "0.80"

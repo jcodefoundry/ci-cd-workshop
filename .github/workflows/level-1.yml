@@ -22,7 +22,7 @@ jobs:
       - name: Check out code (Mario springt in een groene pijp)
         uses: actions/checkout@v4
 
-        # TODO - aanpassen naar enkel bovenstaande step en de rest zelf laten bouwen
+        # TODO - aanpassen naar enkel bovenstaande step en de rest zelf laten bouwen + add falende test
 
       - name: Setup Java 21
         uses: # TODO: Configureer JDK 21 - hint: wellicht ook iets met actions?

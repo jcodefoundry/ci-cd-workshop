@@ -16,7 +16,6 @@ name: Level 5 - Bowser's Castle
 
 on:
   workflow_dispatch: {}
-  # TODO: overweeg push/pull_request triggers
 
 permissions:
   contents: read

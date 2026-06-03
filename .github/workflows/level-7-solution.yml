@@ -12,7 +12,6 @@ name: Level 7 - Star Road (Solution)
 
 on:
   workflow_dispatch: {}
-  # Voor productiegebruik kun je push/pull_request triggers toevoegen.
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}

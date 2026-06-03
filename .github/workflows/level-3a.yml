@@ -33,6 +33,8 @@ jobs:
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
 
+        # TODO - zelf laten uitzoeken (hier jacoco op 50%)
+
       - name: Run tests + generate JaCoCo report
         run: # TODO: Zorg dat je een jacocoTestReport kan genereren met gradle en laat de job falen bij een dekking < 60%
 

@@ -7,7 +7,6 @@ name: Level 5 - Bowser's Castle (Solution)
 
 on:
   workflow_dispatch: {}
-  # In het echt zou je push/pull_request triggers toevoegen
 
 permissions:
   contents: read
@@ -41,6 +40,16 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build Gradle
+        run: ./gradlew clean build
+
+      - name: Inspect workspace
+        run: |
+          pwd
+          ls -la
+          find . -name "*.jar"
+          find . -name "MANIFEST.MF"
 
       - name: Build container image (Paketo)
         run: ./gradlew bootBuildImage --imageName ${IMAGE}
