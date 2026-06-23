@@ -19,5 +19,11 @@ jobs:
           java-version: 21
 
         # TODO - Setup Gradle
+  gradle:
+    runs-on: ubuntu-latest
 
-        # TODO - Run een gradle build command
+    steps:
+      - name: Setup Gradle je weet
+        uses: gradle/actions/setup-gradle@v5
+
+    # TODO - Run een gradle build command
