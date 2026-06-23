@@ -11,17 +11,15 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v6
 
-      - name: Configureer Java 21 en Gradle
+      - name: Configureer Java 21
         uses: actions/setup-java@v5
         with:
           distribution: 'temurin'
           java-version: 21
 
-#  gradle:
-#    runs-on: ubuntu-latest
-
-#    steps:
       - name: Setup Gradle je weet
         uses: gradle/actions/setup-gradle@v5
 
-    # TODO - Run een gradle build command
+      - name: Gradle Build
+        run: ./gradlew build
+
