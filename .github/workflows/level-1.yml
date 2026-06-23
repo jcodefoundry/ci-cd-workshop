@@ -15,7 +15,8 @@ jobs:
       - name: Configureer Java 21 en Gradle
         uses: actions/setup-java@v5
         with:
-          distribution: ''
+          distribution: 'temurin'
+          java-version: 21
 
         # TODO - Setup Gradle
 
