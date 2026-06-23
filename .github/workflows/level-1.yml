@@ -12,6 +12,10 @@ jobs:
         uses: actions/checkout@v6
 
         # TODO - Configureer JDK 21 - hint: wellicht ook iets met actions?
+      - name: Configureer Java 21 en Gradle
+        uses: actions/setup-java@v5
+        with:
+          distribution: ''
 
         # TODO - Setup Gradle
 
