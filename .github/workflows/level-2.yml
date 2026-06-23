@@ -20,7 +20,7 @@ jobs:
       - name: Setup Gradle je weet
         uses: gradle/actions/setup-gradle@v5
 
-      - name: Gradle Build
+      - name: Gradle Test
         run: ./gradlew test
 
       - name: Upload test report
